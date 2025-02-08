@@ -1,5 +1,12 @@
 <script type="text/javascript">
-    setTimeout(function(){
-        window.location.href = 'https://infosetads.mycartpanda.com/checkout/168950580:1';  // Substitua pelo link do checkout
-    }, 1000); // 100 milissegundos, um tempo bem rápido
-</script>
+        setTimeout(function(){
+            // Pega os parâmetros da URL atual
+            var urlParams = window.location.search;
+
+            // Define o link do checkout e adiciona os parâmetros da URL atual
+            var checkoutUrl = 'https://infosetads.mycartpanda.com/checkout/168950580:1' + urlParams;
+
+            // Redireciona para o checkout com os parâmetros da URL
+            window.location.href = checkoutUrl;
+        }, 1000); // 1000 milissegundos (1 segundo)
+    </script>
